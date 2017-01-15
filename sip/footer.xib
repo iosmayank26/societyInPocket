@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Notice_VC" customModule="sip" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="footer" customModule="sip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFI-yE-P8H">
+                    <rect key="frame" x="2" y="4" width="24" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="I5p-Ub-DOO"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="share.png"/>
+                    <connections>
+                        <action selector="shareButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="24a-aR-zn8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yli-mK-iIb">
+                    <rect key="frame" x="34" y="2" width="30" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="3qS-8H-RSN"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="delete.png"/>
+                    <connections>
+                        <action selector="deleteButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="ytn-sb-zNm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PFI-yE-P8H" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5Mk-Tp-Mbu"/>
+                <constraint firstItem="PFI-yE-P8H" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="DxK-WB-18i"/>
+                <constraint firstItem="PFI-yE-P8H" firstAttribute="bottom" secondItem="yli-mK-iIb" secondAttribute="bottom" id="KGY-n1-ngb"/>
+                <constraint firstItem="PFI-yE-P8H" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="PYa-GA-Tk1"/>
+                <constraint firstItem="yli-mK-iIb" firstAttribute="leading" secondItem="PFI-yE-P8H" secondAttribute="trailing" constant="8" symbolic="YES" id="PcA-8t-QyV"/>
+                <constraint firstItem="yli-mK-iIb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="ebG-V8-GDD"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="31.5" y="427"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete.png" width="32" height="32"/>
+        <image name="share.png" width="32" height="32"/>
+    </resources>
+</document>

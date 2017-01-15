@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Notice_VC" customModule="sip" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="notice" customModule="sip" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VhL-h1-iwp">
+                    <rect key="frame" x="104" y="4" width="261" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="nG7-fA-aTX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                    <color key="textColor" red="0.15686274510000001" green="0.21960784310000001" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ywb-H6-lon">
+                    <rect key="frame" x="9" y="90" width="356" height="79"/>
+                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-mu-wFZ">
+                    <rect key="frame" x="104" y="42" width="261" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="iLZ-mE-uGi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AlNile-Bold" family="Al Nile" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BJ3-4D-gGz">
+                    <rect key="frame" x="9" y="4" width="78" height="78"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="78" id="GUM-Ih-RIS"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ozX-mu-wFZ" secondAttribute="trailing" constant="10" id="0oi-20-ze6"/>
+                <constraint firstItem="BJ3-4D-gGz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="9" id="21n-KC-LqH"/>
+                <constraint firstItem="VhL-h1-iwp" firstAttribute="leading" secondItem="ozX-mu-wFZ" secondAttribute="leading" id="4yt-7Q-JIX"/>
+                <constraint firstItem="BJ3-4D-gGz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="S1k-E4-SDU"/>
+                <constraint firstItem="VhL-h1-iwp" firstAttribute="trailing" secondItem="ozX-mu-wFZ" secondAttribute="trailing" id="TSd-2V-FHA"/>
+                <constraint firstItem="BJ3-4D-gGz" firstAttribute="leading" secondItem="Ywb-H6-lon" secondAttribute="leading" id="WvT-1B-cxx"/>
+                <constraint firstItem="Ywb-H6-lon" firstAttribute="top" secondItem="BJ3-4D-gGz" secondAttribute="bottom" constant="8" symbolic="YES" id="cwg-6B-v5O"/>
+                <constraint firstItem="VhL-h1-iwp" firstAttribute="leading" secondItem="BJ3-4D-gGz" secondAttribute="trailing" constant="17" id="iZm-Yf-vlr"/>
+                <constraint firstItem="VhL-h1-iwp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="ibW-Tv-55L"/>
+                <constraint firstItem="Ywb-H6-lon" firstAttribute="top" secondItem="ozX-mu-wFZ" secondAttribute="bottom" constant="27" id="m46-Je-bPg"/>
+                <constraint firstAttribute="bottom" secondItem="Ywb-H6-lon" secondAttribute="bottom" constant="11" id="uvq-He-D2t"/>
+                <constraint firstItem="Ywb-H6-lon" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vqm-e8-kNN"/>
+                <constraint firstItem="ozX-mu-wFZ" firstAttribute="top" secondItem="VhL-h1-iwp" secondAttribute="bottom" constant="5" id="wKt-Pk-osE"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dateAndTime" destination="ozX-mu-wFZ" id="xci-RH-eSV"/>
+                <outlet property="detailOfPost" destination="Ywb-H6-lon" id="1aO-fo-8Md"/>
+                <outlet property="imageViewOfPost" destination="BJ3-4D-gGz" id="aJr-D6-JxW"/>
+                <outlet property="nameOfPostCreater" destination="VhL-h1-iwp" id="PGk-KD-71f"/>
+            </connections>
+            <point key="canvasLocation" x="-241.5" y="-25"/>
+        </view>
+    </objects>
+</document>

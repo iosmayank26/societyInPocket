@@ -8,14 +8,42 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseMessaging
+import UserNotifications
+import FirebaseInstanceID
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var reachability : Reachability?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        FIRApp.configure()
+        //FIRDatabase.database().persistenceEnabled = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(checkForReachability), name: .reachabilityChanged , object: nil);
+        self.reachability = Reachability.forInternetConnection();
+        self.reachability!.startNotifier();
+        
+        
+        let notificationTypes : UIUserNotificationType = [UIUserNotificationType.alert,UIUserNotificationType.badge,UIUserNotificationType.sound]
+        
+        
+        
+        let notificationSetting = UIUserNotificationSettings(types: notificationTypes, categories: nil)
+        
+        
+        application.registerForRemoteNotifications()
+        
+        application.registerUserNotificationSettings(notificationSetting)
+        // Override point for customization after application launch.
+        
+        
+        NotificationCenter.default.addObserver(self,selector: #selector(self.tokenRefreshNotification),name: NSNotification.Name.firInstanceIDTokenRefresh, object: nil)
+
+        
         // Override point for customization after application launch.
         return true
     }
@@ -88,6 +116,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func checkForReachability(notification: Notification)
+    {
+        var remoteHostStatus = self.reachability!.currentReachabilityStatus()
+        if (remoteHostStatus.rawValue == NotReachable.rawValue)
+        {
+            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+            let OffllineVC = mainStoryboard.instantiateViewController(withIdentifier: "Offline_VC") as! UIViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = OffllineVC
+          appDelegate.window?.makeKeyAndVisible()
+                    }
+        else {
+            let mainStoryboard : UIStoryboard = UIStoryboard(name: "Main" , bundle: nil)
+            let newVC = mainStoryboard.instantiateViewController(withIdentifier: "ChooseSociety") as! UIViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+           appDelegate.window?.rootViewController = newVC
+            appDelegate.window?.makeKeyAndVisible()
+
+            
+        }
+        
+        
+    }
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("MessageID: \(userInfo["gcm_message_id"]!)")
+        
+        print (userInfo)
+    }
+    
+    func tokenRefreshNotification(notification: NSNotification) {
+        if let refreshedToken = FIRInstanceID.instanceID().token() {
+            print("InstanceID token: \(refreshedToken)")
+            sendToServer(token: "\(refreshedToken)")
+            
+        }
+        connectToFcm()
+    }
+    
+    func sendToServer(token : String){
+        
+        print("MY CODE")
+        
+        let parameters = "\(token)"
+        
+        let ref = FIRDatabase.database().reference().child("users").childByAutoId()
+        let values = ["gcmtoken" : parameters ]
+        ref.updateChildValues(values,withCompletionBlock: {(err,ref)in
+            if err != nil{
+                print(err)
+                return
+            }
+            
+        })
+        
+           }
+    
+    func connectToFcm() {
+        FIRMessaging.messaging().connect { (error) in
+            if (error != nil) {
+                print("Unable to connect with FCM. \(error)")
+            } else {
+                print("Connected to FCM.")
+            }
+        }
+    }
+    
+    
+
 
 }
 
