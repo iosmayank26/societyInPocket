@@ -54,7 +54,6 @@
 		C0A7A8531DFC965F003EFBC0 /* share-2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A7A8521DFC965F003EFBC0 /* share-2.png */; };
 		C0BC15DF1DF044C800E3071E /* vvip2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0BC15DE1DF044C800E3071E /* vvip2.jpg */; };
 		C0BC15E11DF0487900E3071E /* podfile in Resources */ = {isa = PBXBuildFile; fileRef = C0BC15E01DF0487900E3071E /* podfile */; };
-		C0BC15E31DF04CB400E3071E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0BC15E21DF04CB400E3071E /* GoogleService-Info.plist */; };
 		C0BF0E181E0AD34E00786FB4 /* user-3.png in Resources */ = {isa = PBXBuildFile; fileRef = C0BF0E171E0AD34E00786FB4 /* user-3.png */; };
 		C0CBE05A1E1D0ECC0084B6C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBE0591E1D0ECC0084B6C0 /* Post.swift */; };
 		C0D87E891E0B0EC000BA7BD0 /* Services_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D87E881E0B0EC000BA7BD0 /* Services_VC.swift */; };
@@ -68,6 +67,7 @@
 		C0E6ED8B1DEDC40C001EA1CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0E6ED891DEDC40C001EA1CA /* LaunchScreen.storyboard */; };
 		C0E6ED961DEDC40C001EA1CA /* sipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E6ED951DEDC40C001EA1CA /* sipTests.swift */; };
 		C0E6EDA11DEDC40C001EA1CA /* sipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E6EDA01DEDC40C001EA1CA /* sipUITests.swift */; };
+		C0E765BC1E2D2A5F000A0120 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0E765BB1E2D2A5F000A0120 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +138,6 @@
 		C0A7A8521DFC965F003EFBC0 /* share-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-2.png"; sourceTree = "<group>"; };
 		C0BC15DE1DF044C800E3071E /* vvip2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vvip2.jpg; sourceTree = "<group>"; };
 		C0BC15E01DF0487900E3071E /* podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = podfile; sourceTree = "<group>"; };
-		C0BC15E21DF04CB400E3071E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C0BF0E171E0AD34E00786FB4 /* user-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-3.png"; sourceTree = "<group>"; };
 		C0CBE0591E1D0ECC0084B6C0 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C0D87E881E0B0EC000BA7BD0 /* Services_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services_VC.swift; sourceTree = "<group>"; };
@@ -158,6 +157,7 @@
 		C0E6ED9C1DEDC40C001EA1CA /* sipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E6EDA01DEDC40C001EA1CA /* sipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sipUITests.swift; sourceTree = "<group>"; };
 		C0E6EDA21DEDC40C001EA1CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0E765BB1E2D2A5F000A0120 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E26736B656C69C51550D1C3D /* Pods-sip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sip/Pods-sip.debug.xcconfig"; sourceTree = "<group>"; };
 		ECC553A7887BD2C359F9F751 /* Pods-sip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sip.release.xcconfig"; path = "Pods/Target Support Files/Pods-sip/Pods-sip.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -305,8 +305,8 @@
 				C09E91991E1119B900DCFE65 /* Reachability.m */,
 				C09E919B1E111B7A00DCFE65 /* sip-Bridging-Header.h */,
 				C0E6ED871DEDC40C001EA1CA /* Assets.xcassets */,
+				C0E765BB1E2D2A5F000A0120 /* GoogleService-Info.plist */,
 				C0E6ED891DEDC40C001EA1CA /* LaunchScreen.storyboard */,
-				C0BC15E21DF04CB400E3071E /* GoogleService-Info.plist */,
 				C0E6ED8C1DEDC40C001EA1CA /* Info.plist */,
 				C0E6ED841DEDC40C001EA1CA /* sip.xcdatamodeld */,
 				C06BB6501DEF59B2004E4579 /* notice.xib */,
@@ -479,6 +479,7 @@
 				C0DA23261E07E69B003B0BA9 /* 75920_546966602023528_581942456_n.jpg in Resources */,
 				C052E80C1E0DD5C9005CCC16 /* comingsoon.jpg in Resources */,
 				C0A19A471E01F111004A2BE9 /* photo-camera-2.png in Resources */,
+				C0E765BC1E2D2A5F000A0120 /* GoogleService-Info.plist in Resources */,
 				C0E6ED8B1DEDC40C001EA1CA /* LaunchScreen.storyboard in Resources */,
 				C0A7A84F1DFC8D04003EFBC0 /* share.png in Resources */,
 				C06BB66C1DEF6A96004E4579 /* four.png in Resources */,
@@ -501,7 +502,6 @@
 				C00C38F81E29635B00820FF4 /* noticeReq.xib in Resources */,
 				C0A7A8511DFC952C003EFBC0 /* heart.png in Resources */,
 				C0040C721E1EE05100A0E2BB /* user-4.png in Resources */,
-				C0BC15E31DF04CB400E3071E /* GoogleService-Info.plist in Resources */,
 				C0040C701E1EE00A00A0E2BB /* user-5.png in Resources */,
 				C0E6ED831DEDC40C001EA1CA /* Main.storyboard in Resources */,
 				C0040C741E1EE14300A0E2BB /* photo-camera-3.png in Resources */,

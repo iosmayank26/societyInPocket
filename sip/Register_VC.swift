@@ -307,7 +307,7 @@ class Register_VC : UIViewController, UIImagePickerControllerDelegate, UINavigat
     private func registerUserIntoDatabaseWithUID(uid: String, values: [String: AnyObject]) {
         
         if societyName.text == "VVIP Addresses"{
-        let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/")
+        let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/")
         //let usersReference = ref.child("users").child(uid)
         
         let usersReference = ref.child("vvipAddresses").child("users").child(uid)
@@ -325,7 +325,7 @@ class Register_VC : UIViewController, UIImagePickerControllerDelegate, UINavigat
         })}
         
        else if societyName.text == "Gaur Cascades"{
-            let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/")
+            let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/")
             //let usersReference = ref.child("users").child(uid)
             
             let usersReference = ref.child("gaurCascades").child("users").child(uid)
@@ -344,7 +344,7 @@ class Register_VC : UIViewController, UIImagePickerControllerDelegate, UINavigat
             
         }
         else {
-            let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/")
+            let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/")
             //let usersReference = ref.child("users").child(uid)
             
             let usersReference = ref.child("riverHeights").child("users").child(uid)

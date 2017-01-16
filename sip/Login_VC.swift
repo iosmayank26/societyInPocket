@@ -44,7 +44,7 @@ class Login_VC : UIViewController{
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: {(user,error) in
            
             let admin = (FIRAuth.auth()?.currentUser?.uid)! as String
-            if admin == "K2xf0pu19XceWw3hS5VQOFCmGdl1" {
+            if admin == "IDCuFb3jQlO6CWeHjJV3a8Ca7VH2" {
                 
                 
                 self.performSegue(withIdentifier: "ifAdmin", sender: nil)

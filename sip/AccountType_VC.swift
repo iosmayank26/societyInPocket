@@ -39,7 +39,7 @@ class AccountType_VC : UIViewController, UIPickerViewDelegate,UIPickerViewDataSo
             
                 if user != nil && (user?.isEmailVerified)!{
                 let admin = try? (FIRAuth.auth()?.currentUser?.uid)! as String
-                if admin == "K2xf0pu19XceWw3hS5VQOFCmGdl1" {
+                if admin == "IDCuFb3jQlO6CWeHjJV3a8Ca7VH2" {
                     print(user) 
                    self.switchAd()
                     

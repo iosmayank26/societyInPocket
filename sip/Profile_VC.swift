@@ -304,7 +304,7 @@ class Profile_VC : UIViewController, UIImagePickerControllerDelegate, UINavigati
 }
     func updateProfile(){
         let uid = FIRAuth.auth()?.currentUser?.uid
-        let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/vvipAddresses/users/\(uid!)")
+        let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/vvipAddresses/users/\(uid!)")
         let imageName = NSUUID().uuidString
         let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName).jpg")
         

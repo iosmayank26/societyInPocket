@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>236316423466-2j3mimom0gi0crf2v0o9cqhh877a48cn.apps.googleusercontent.com</string>
+	<string>1094935772939-2l77fajdtmcsvdrctjkri64quph1gs7h.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.236316423466-2j3mimom0gi0crf2v0o9cqhh877a48cn</string>
+	<string>com.googleusercontent.apps.1094935772939-2l77fajdtmcsvdrctjkri64quph1gs7h</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAh1iSPlTmAJCn7V6RI7wMWQf4nYH8-nSw</string>
+	<string>AIzaSyBCLACksx29LJpTb6Fejqh9R1dKjMWfR6s</string>
 	<key>GCM_SENDER_ID</key>
-	<string>236316423466</string>
+	<string>1094935772939</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.application.sip</string>
 	<key>PROJECT_ID</key>
-	<string>sippro-2176c</string>
+	<string>sipindia-cd004</string>
 	<key>STORAGE_BUCKET</key>
-	<string>sippro-2176c.appspot.com</string>
+	<string>sipindia-cd004.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:236316423466:ios:278e68fc51b11b9c</string>
+	<string>1:1094935772939:ios:278e68fc51b11b9c</string>
 	<key>DATABASE_URL</key>
-	<string>https://sippro-2176c.firebaseio.com</string>
+	<string>https://sipindia-cd004.firebaseio.com</string>
 </dict>
 </plist>

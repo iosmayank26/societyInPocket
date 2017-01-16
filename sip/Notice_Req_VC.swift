@@ -200,7 +200,7 @@ class Notice_Req_VC : UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.message.text = post.message
         cell.dateTime.text = "\(post.date!)  \(post.time!)"
         let uid = post.uid! as String
-        let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/vvipAddresses/users/\(uid)")
+        let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/vvipAddresses/users/\(uid)")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             let dictionary = snapshot.value as? [String: AnyObject]

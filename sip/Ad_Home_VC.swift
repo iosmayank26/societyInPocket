@@ -48,7 +48,7 @@ class Ad_Home_VC : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
 //        longPressGesture.delegate = self
 //        self.tableView.addGestureRecognizer(longPressGesture)
         
-        
+//        
         tableView.delegate = self
         tableView.dataSource = self
         postTextView.delegate = self
@@ -342,7 +342,7 @@ class Ad_Home_VC : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
         cell.message.text = post.message
         cell.dateTime.text = "\(post.date!)  \(post.time!)"
         let uid = post.uid! as String
-        let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/vvipAddresses/users/\(uid)")
+        let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/vvipAddresses/users/\(uid)")
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             
             let dictionary = snapshot.value as? [String: AnyObject]
@@ -413,7 +413,7 @@ class Ad_Home_VC : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
             let destination = segue.destination as! ExpandedPost_VC
             
             let uid = post.uid! as String
-            let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/vvipAddresses/users/\(uid)")
+            let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/vvipAddresses/users/\(uid)")
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 let dictionary = snapshot.value as? [String: AnyObject]
@@ -496,7 +496,7 @@ class Ad_Home_VC : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
                 //        timestamp = [".sv": "timestamp" as AnyObject]
                 //
                 if societyIs == "VVIP Addresses" {
-                    let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/")
+                    let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/")
                     let noticeRef = ref.child("vvipAddresses").child("notices").childByAutoId()
                     let values = ["name": self.userName ,"message": self.postTextView.text,"date": date,"time": convertedDate,"uid": uid,"imageUrl": self.imageUrl] as [String : Any]
                     noticeRef.updateChildValues(values,withCompletionBlock: {(err,ref)in
@@ -513,7 +513,7 @@ class Ad_Home_VC : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
                     
                 else {
                     
-                    let ref = FIRDatabase.database().reference(fromURL: "https://sippro-2176c.firebaseio.com/")
+                    let ref = FIRDatabase.database().reference(fromURL: "https://sipindia-cd004.firebaseio.com/")
                     let noticeRef = ref.child("gaurCascades").child("notices").childByAutoId()
                     let values = ["name": self.userName ,"message": self.postTextView.text,"date": date,"time": convertedDate,"uid": uid,"imageUrl": self.imageUrl] as [String : Any]
                     noticeRef.updateChildValues(values,withCompletionBlock: {(err,ref)in
